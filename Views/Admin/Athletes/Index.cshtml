@@ -1,0 +1,40 @@
+@model List<CloverleafThrows.Models.Athlete>
+@{
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Athletes";
+}
+
+<div class="admin-page-header">
+    <div>
+        <h1>Athletes</h1>
+        <p>@Model.Count active throwers</p>
+    </div>
+    <a href="/Admin/Athletes/Create" class="btn btn-primary">+ Add Athlete</a>
+</div>
+
+<table class="admin-table">
+    <thead>
+        <tr><th>Name</th><th>Class</th><th>Gender</th><th>Events</th><th>Notes</th><th style="text-align:right;">Actions</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var a in Model)
+        {
+            <tr>
+                <td style="font-weight:600;">@a.FullName</td>
+                <td>@a.GradYearDisplay</td>
+                <td>@(a.Gender == "M" ? "Boys" : "Girls")</td>
+                <td>
+                    @foreach (var ev in a.Events)
+                    {
+                        var style = ev.IsPrimary ? "font-weight:600;" : "color:var(--text-muted);";
+                        <span class="tag" style="background:var(--gray-100);color:var(--gray-700);@style;margin-right:2px;">@ev.EventName</span>
+                    }
+                </td>
+                <td style="color:var(--text-muted); font-size:0.8125rem;">@(a.Notes ?? "—")</td>
+                <td style="text-align:right;">
+                    <a href="/Admin/Athletes/Edit/@a.Id" class="btn" style="font-size:0.75rem; padding:0.2rem 0.5rem;">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

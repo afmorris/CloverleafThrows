@@ -1,0 +1,69 @@
+@model List<CloverleafThrows.Models.WorkoutDay>
+@{
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Workouts";
+    var mesocycle = ViewBag.Mesocycle as CloverleafThrows.Models.Mesocycle;
+}
+
+<div class="admin-page-header">
+    <div>
+        <h1>Workouts</h1>
+        @if (mesocycle != null)
+        {
+            <p>@mesocycle.Name &mdash; @mesocycle.StartDate.ToString("MMM d") to @mesocycle.EndDate.ToString("MMM d")</p>
+        }
+    </div>
+    @if (mesocycle != null)
+    {
+        <a href="/Admin/Workouts/Create?mesocycleId=@mesocycle.Id" class="btn btn-primary">+ Add Day</a>
+    }
+</div>
+
+@if (!Model.Any())
+{
+    <div class="admin-card" style="text-align:center; padding:3rem;">
+        <p style="color:var(--text-muted);">@(ViewBag.Message ?? "No workout days yet.")</p>
+        <a href="/Admin/Mesocycles" class="btn" style="margin-top:1rem;">Manage Mesocycles</a>
+    </div>
+}
+else
+{
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Focus</th>
+                <th>Notes</th>
+                <th style="text-align:right;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var day in Model)
+            {
+                var isToday = day.Date.Date == DateTime.Today;
+                <tr style="@(isToday ? "background: #e8f5ee;" : "")">
+                    <td style="font-weight:700;">@day.DayNumber</td>
+                    <td style="white-space:nowrap;">
+                        @day.Date.ToString("ddd, MMM d")
+                        @if (isToday) { <span class="tag" style="background:#2d8a4e;color:white;margin-left:4px;">Today</span> }
+                    </td>
+                    <td>
+                        <span class="tag" style="background:@day.DayTypeColor;color:@day.DayTypeTextColor">@day.DayType</span>
+                    </td>
+                    <td>
+                        <span class="tag" style="background:@day.ThrowsFocusColor;color:@day.ThrowsFocusTextColor">@day.ThrowsFocus</span>
+                    </td>
+                    <td style="max-width:200px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--text-muted); font-size:0.8125rem;">
+                        @(day.CoachNotes ?? "—")
+                    </td>
+                    <td style="text-align:right; white-space:nowrap;">
+                        <a href="/Admin/Workouts/Edit/@day.Id" class="btn" style="font-size:0.75rem; padding:0.25rem 0.5rem;">Edit</a>
+                        <a href="/Workout/Detail?date=@day.Date.ToString("yyyy-MM-dd")" class="btn" style="font-size:0.75rem; padding:0.25rem 0.5rem;" target="_blank">View</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

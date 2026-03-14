@@ -1,0 +1,58 @@
+@model CloverleafThrows.Models.Meet
+@{
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+    var isNew = Model.Id == 0;
+    ViewData["Title"] = isNew ? "New Meet" : $"Edit {Model.Name}";
+}
+
+<div class="admin-page-header">
+    <h1>@ViewData["Title"]</h1>
+    <a href="/Admin/Meets" class="btn">Back to Meets</a>
+</div>
+
+<div class="admin-card">
+    <form method="post" action="/Admin/Meets/@(isNew ? "Create" : "Edit")">
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <div class="form-group">
+            <label class="form-label">Meet Name</label>
+            <input type="text" name="Name" value="@Model.Name" class="form-input" required />
+        </div>
+
+        <div class="form-row-3">
+            <div class="form-group">
+                <label class="form-label">Date</label>
+                <input type="date" name="Date" value="@Model.Date.ToString("yyyy-MM-dd")" class="form-input" required />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Location</label>
+                <input type="text" name="Location" value="@Model.Location" class="form-input" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Type</label>
+                <select name="MeetType" class="form-select">
+                    <option value="Indoor" selected="@(Model.MeetType == "Indoor")">Indoor</option>
+                    <option value="Outdoor" selected="@(Model.MeetType == "Outdoor")">Outdoor</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Notes</label>
+            <textarea name="Notes" class="form-textarea" rows="2">@Model.Notes</textarea>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">@(isNew ? "Add Meet" : "Save Changes")</button>
+            <a href="/Admin/Meets" class="btn">Cancel</a>
+            @if (!isNew)
+            {
+                <form method="post" action="/Admin/Meets/Delete" style="display:inline; margin-left:auto;">
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <button type="submit" class="btn" style="color:#a32d2d;"
+                            onclick="return confirm('Remove this meet?')">Delete</button>
+                </form>
+            }
+        </div>
+    </form>
+</div>

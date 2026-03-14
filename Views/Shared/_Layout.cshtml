@@ -1,0 +1,39 @@
+@{
+    var currentPath = Context.Request.Path.Value?.ToLower() ?? "/";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Cloverleaf Throws</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-brand">Cloverleaf Throws</a>
+            <div class="nav-links">
+                <a href="/" class="nav-link @(currentPath == "/" ? "active" : "")">Calendar</a>
+                <a href="/Workout/Today" class="nav-link @(currentPath.Contains("workout") ? "active" : "")">Today's Workout</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="site-content">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <span>Made with ♥ by Coach Tony</span>
+        <span class="footer-dot">&middot;</span>
+        <a href="https://cloverleaftrack.com" target="_blank" rel="noopener">cloverleaftrack.com</a>
+    </footer>
+
+    <script src="~/js/site.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

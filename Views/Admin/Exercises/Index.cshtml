@@ -1,0 +1,55 @@
+@model List<CloverleafThrows.Models.Exercise>
+@{
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Exercise Library";
+    var categories = ViewBag.Categories as List<CloverleafThrows.Models.ExerciseCategory> ?? new();
+}
+
+<div class="admin-page-header">
+    <div>
+        <h1>Exercise Library</h1>
+        <p>@Model.Count exercises across @categories.Count categories</p>
+    </div>
+    <a href="/Admin/Exercises/Create" class="btn btn-primary">+ Add Exercise</a>
+</div>
+
+@foreach (var cat in categories)
+{
+    var exercises = Model.Where(e => e.CategoryId == cat.Id).ToList();
+    if (!exercises.Any()) continue;
+
+    <div class="admin-card" style="margin-bottom:1rem;">
+        <div class="admin-card-header">
+            <div class="admin-card-title">@cat.Name</div>
+            <span style="font-size:0.75rem; color:var(--text-muted);">@exercises.Count exercises</span>
+        </div>
+        <table class="admin-table">
+            <thead>
+                <tr><th>Name</th><th>Default Reps</th><th>Notes</th><th>Status</th><th style="text-align:right;">Actions</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var ex in exercises)
+                {
+                    <tr style="@(!ex.IsActive ? "opacity:0.5;" : "")">
+                        <td style="font-weight:600;">@ex.Name</td>
+                        <td style="color:var(--text-muted);">@(ex.DefaultReps ?? "—")</td>
+                        <td style="font-size:0.8125rem; color:var(--text-muted);">@(ex.Notes ?? "—")</td>
+                        <td>
+                            @if (ex.IsActive)
+                            {
+                                <span class="tag" style="background:#e8f5ee;color:#1e6b38;">Active</span>
+                            }
+                            else
+                            {
+                                <span class="tag" style="background:var(--gray-100);color:var(--gray-500);">Inactive</span>
+                            }
+                        </td>
+                        <td style="text-align:right;">
+                            <a href="/Admin/Exercises/Edit/@ex.Id" class="btn" style="font-size:0.75rem; padding:0.2rem 0.5rem;">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

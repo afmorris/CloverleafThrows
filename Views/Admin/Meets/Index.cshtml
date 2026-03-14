@@ -1,0 +1,31 @@
+@model List<CloverleafThrows.Models.Meet>
+@{
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Meets";
+}
+
+<div class="admin-page-header">
+    <h1>Meets</h1>
+    <a href="/Admin/Meets/Create" class="btn btn-primary">+ Add Meet</a>
+</div>
+
+<table class="admin-table">
+    <thead>
+        <tr><th>Date</th><th>Meet</th><th>Location</th><th>Type</th><th style="text-align:right;">Actions</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var m in Model)
+        {
+            var isPast = m.Date < DateTime.Today;
+            <tr style="@(isPast ? "opacity:0.5;" : "")">
+                <td style="white-space:nowrap; font-weight:600;">@m.Date.ToString("MMM d, yyyy")</td>
+                <td>@m.Name</td>
+                <td style="color:var(--text-muted);">@m.Location</td>
+                <td><span class="tag" style="background:var(--gray-100);color:var(--gray-700);">@m.MeetType</span></td>
+                <td style="text-align:right;">
+                    <a href="/Admin/Meets/Edit/@m.Id" class="btn" style="font-size:0.75rem; padding:0.2rem 0.5rem;">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

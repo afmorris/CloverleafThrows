@@ -1,0 +1,119 @@
+@model CloverleafThrows.Models.SeasonOverviewViewModel
+@{
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Training Load Overview";
+}
+
+<div class="admin-page-header">
+    <div>
+        <h1>Training Load Overview</h1>
+        <p>@Model.Mesocycle.Name &mdash; @Model.Mesocycle.StartDate.ToString("MMM d") to @Model.Mesocycle.EndDate.ToString("MMM d")</p>
+    </div>
+</div>
+
+<div class="stat-grid">
+    <div class="stat-card">
+        <div class="stat-label">Total Days</div>
+        <div class="stat-value">@Model.Days.Count</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Completed</div>
+        <div class="stat-value">@Model.Days.Count(d => d.Date < DateTime.Today)</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Remaining</div>
+        <div class="stat-value">@Model.Days.Count(d => d.Date >= DateTime.Today)</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Meets This Cycle</div>
+        <div class="stat-value">@Model.Meets.Count(m => m.Date >= Model.Mesocycle.StartDate && m.Date <= Model.Mesocycle.EndDate)</div>
+    </div>
+</div>
+
+@* Day type distribution *@
+<div class="admin-card">
+    <div class="admin-card-title" style="margin-bottom:1rem;">Day Type Distribution</div>
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+        @foreach (var group in Model.Days.GroupBy(d => d.DayType).OrderByDescending(g => g.Count()))
+        {
+            var sample = group.First();
+            <div style="padding:0.5rem 1rem; border-radius:8px; background:@sample.DayTypeColor; color:@sample.DayTypeTextColor; font-size:0.875rem;">
+                <span style="font-weight:700;">@group.Count()</span> @group.Key
+            </div>
+        }
+    </div>
+</div>
+
+@* Throws focus distribution *@
+<div class="admin-card">
+    <div class="admin-card-title" style="margin-bottom:1rem;">Throws Focus Distribution</div>
+    <div style="display:flex; gap:1rem;">
+        @{
+            var spCount = Model.Days.Count(d => d.ThrowsFocus == "Shot Put");
+            var dtCount = Model.Days.Count(d => d.ThrowsFocus == "Discus");
+        }
+        <div style="padding:0.75rem 1.25rem; border-radius:8px; background:#FCE4D6; color:#C55A11;">
+            <div style="font-size:1.5rem; font-weight:700;">@spCount</div>
+            <div style="font-size:0.8125rem;">Shot Put days</div>
+        </div>
+        <div style="padding:0.75rem 1.25rem; border-radius:8px; background:#D6E4F0; color:#1F4E79;">
+            <div style="font-size:1.5rem; font-weight:700;">@dtCount</div>
+            <div style="font-size:0.8125rem;">Discus days</div>
+        </div>
+    </div>
+</div>
+
+@* Timeline view *@
+<div class="admin-card">
+    <div class="admin-card-title" style="margin-bottom:1rem;">Week-by-Week Timeline</div>
+    @{
+        var weeks = Model.Days.GroupBy(d => {
+            var diff = (d.Date - Model.Mesocycle.StartDate).Days;
+            return diff / 7 + 1;
+        }).OrderBy(g => g.Key);
+    }
+    @foreach (var week in weeks)
+    {
+        <div style="margin-bottom:1rem;">
+            <div style="font-size:0.75rem; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.375rem;">
+                Week @week.Key
+            </div>
+            <div style="display:flex; gap:0.375rem; flex-wrap:wrap;">
+                @foreach (var day in week.OrderBy(d => d.Date))
+                {
+                    var isPast = day.Date < DateTime.Today;
+                    var isToday = day.Date.Date == DateTime.Today;
+                    var border = isToday ? "2px solid #2d8a4e" : "1px solid var(--border)";
+                    <a href="/Admin/Workouts/Edit/@day.Id"
+                       style="display:flex; flex-direction:column; padding:0.375rem 0.625rem; border-radius:6px; background:var(--white); border:@border; text-decoration:none; color:inherit; min-width:100px; @(isPast ? "opacity:0.6;" : "")">
+                        <span style="font-size:0.6875rem; color:var(--text-muted);">@day.Date.ToString("ddd, MMM d")</span>
+                        <span style="font-size:0.75rem; font-weight:600;">Day @day.DayNumber</span>
+                        <div style="display:flex; gap:2px; margin-top:2px;">
+                            <span class="tag" style="background:@day.DayTypeColor;color:@day.DayTypeTextColor;font-size:7px;">@day.DayType</span>
+                            <span class="tag" style="background:@day.ThrowsFocusColor;color:@day.ThrowsFocusTextColor;font-size:7px;">@day.ThrowsFocus</span>
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@* Upcoming meets in this cycle *@
+@{
+    var cycleMeets = Model.Meets.Where(m => m.Date >= Model.Mesocycle.StartDate && m.Date <= Model.Mesocycle.EndDate).ToList();
+}
+@if (cycleMeets.Any())
+{
+    <div class="admin-card">
+        <div class="admin-card-title" style="margin-bottom:0.75rem;">Meets During This Cycle</div>
+        @foreach (var meet in cycleMeets)
+        {
+            <div style="display:flex; gap:0.75rem; align-items:center; padding:0.375rem 0; border-bottom:1px solid var(--gray-100);">
+                <span style="font-weight:600; min-width:80px;">@meet.Date.ToString("MMM d")</span>
+                <span>@meet.Name</span>
+                <span style="color:var(--text-muted); font-size:0.8125rem;">@meet.Location</span>
+            </div>
+        }
+    </div>
+}

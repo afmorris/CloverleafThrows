@@ -1,0 +1,55 @@
+@model List<CloverleafThrows.Models.Mesocycle>
+@{
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Mesocycles";
+}
+
+<div class="admin-page-header">
+    <h1>Mesocycles</h1>
+    <a href="/Admin/Mesocycles/Create" class="btn btn-primary">+ New Mesocycle</a>
+</div>
+
+@if (!Model.Any())
+{
+    <div class="admin-card" style="text-align:center; padding:3rem;">
+        <p style="color:var(--text-muted);">No mesocycles yet. Create your first training block.</p>
+    </div>
+}
+else
+{
+    <table class="admin-table">
+        <thead>
+            <tr><th>Name</th><th>Dates</th><th>Days</th><th>Status</th><th style="text-align:right;">Actions</th></tr>
+        </thead>
+        <tbody>
+            @foreach (var m in Model)
+            {
+                <tr>
+                    <td style="font-weight:600;">@m.Name</td>
+                    <td>@m.StartDate.ToString("MMM d") &ndash; @m.EndDate.ToString("MMM d, yyyy")</td>
+                    <td>@m.TotalDays</td>
+                    <td>
+                        @if (m.IsCurrent)
+                        {
+                            <span class="tag" style="background:#e8f5ee;color:#1e6b38;">Current</span>
+                        }
+                        else
+                        {
+                            <form method="post" action="/Admin/Mesocycles/SetCurrent" style="display:inline;">
+                                <input type="hidden" name="id" value="@m.Id" />
+                                <button type="submit" class="btn" style="font-size:0.6875rem; padding:0.2rem 0.5rem;">Set Current</button>
+                            </form>
+                        }
+                    </td>
+                    <td style="text-align:right;">
+                        <a href="/Admin/Workouts?mesocycleId=@m.Id" class="btn" style="font-size:0.75rem; padding:0.2rem 0.5rem;">View Days</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<div style="margin-top:2rem;">
+    <a href="/Admin/Mesocycles/Templates" class="btn">Manage Week Templates</a>
+</div>

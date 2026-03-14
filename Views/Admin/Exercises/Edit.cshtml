@@ -1,0 +1,70 @@
+@model CloverleafThrows.Models.Exercise
+@{
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+    var isNew = Model.Id == 0;
+    ViewData["Title"] = isNew ? "New Exercise" : $"Edit {Model.Name}";
+    var categories = ViewBag.Categories as List<CloverleafThrows.Models.ExerciseCategory> ?? new();
+}
+
+<div class="admin-page-header">
+    <h1>@ViewData["Title"]</h1>
+    <a href="/Admin/Exercises" class="btn">Back to Library</a>
+</div>
+
+<div class="admin-card">
+    <form method="post" action="/Admin/Exercises/@(isNew ? "Create" : "Edit")">
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Name</label>
+                <input type="text" name="Name" value="@Model.Name" class="form-input" required autofocus />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Category</label>
+                <select name="CategoryId" class="form-select">
+                    @foreach (var cat in categories)
+                    {
+                        <option value="@cat.Id" selected="@(Model.CategoryId == cat.Id)">@cat.Name</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Default Reps</label>
+                <input type="text" name="DefaultReps" value="@Model.DefaultReps" class="form-input" placeholder="e.g., 3 x 10 each" />
+                <div class="form-hint">Suggested reps when adding to a workout</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Notes</label>
+                <textarea name="Notes" class="form-textarea" rows="2">@Model.Notes</textarea>
+            </div>
+        </div>
+
+        @if (!isNew)
+        {
+            <div class="form-group">
+                <label class="form-label">Status</label>
+                <select name="IsActive" class="form-select" style="width:auto;">
+                    <option value="true" selected="@Model.IsActive">Active</option>
+                    <option value="false" selected="@(!Model.IsActive)">Inactive</option>
+                </select>
+            </div>
+        }
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">@(isNew ? "Create Exercise" : "Save Changes")</button>
+            <a href="/Admin/Exercises" class="btn">Cancel</a>
+            @if (!isNew)
+            {
+                <form method="post" action="/Admin/Exercises/Delete" style="display:inline; margin-left:auto;">
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <button type="submit" class="btn" style="color:#a32d2d;"
+                            onclick="return confirm('Deactivate this exercise?')">Deactivate</button>
+                </form>
+            }
+        </div>
+    </form>
+</div>

@@ -1,0 +1,112 @@
+@{
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Dashboard";
+    var mesocycle = ViewBag.Mesocycle as CloverleafThrows.Models.Mesocycle;
+    var today = ViewBag.Today as CloverleafThrows.Models.WorkoutDay;
+    var meets = ViewBag.UpcomingMeets as List<CloverleafThrows.Models.Meet> ?? new();
+    var days = ViewBag.Days as List<CloverleafThrows.Models.WorkoutDay> ?? new();
+    int athleteCount = ViewBag.AthleteCount ?? 0;
+}
+
+<div class="admin-page-header">
+    <div>
+        <h1>Dashboard</h1>
+        <p>@DateTime.Today.ToString("dddd, MMMM d, yyyy")</p>
+    </div>
+</div>
+
+<div class="stat-grid">
+    <div class="stat-card">
+        <div class="stat-label">Current Mesocycle</div>
+        <div class="stat-value" style="font-size:1.125rem;">@(mesocycle?.Name ?? "None")</div>
+        @if (mesocycle != null)
+        {
+            <div class="stat-sub">@mesocycle.StartDate.ToString("MMM d") &ndash; @mesocycle.EndDate.ToString("MMM d")</div>
+        }
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Workout Days</div>
+        <div class="stat-value">@days.Count</div>
+        @if (mesocycle != null)
+        {
+            var completed = days.Count(d => d.Date < DateTime.Today);
+            <div class="stat-sub">@completed completed</div>
+        }
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Athletes</div>
+        <div class="stat-value">@athleteCount</div>
+        <div class="stat-sub">active roster</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Next Meet</div>
+        @if (meets.Any())
+        {
+            <div class="stat-value" style="font-size:1rem;">@meets.First().Name</div>
+            <div class="stat-sub">@meets.First().Date.ToString("MMM d")</div>
+        }
+        else
+        {
+            <div class="stat-value" style="font-size:1rem; color: var(--text-muted);">None scheduled</div>
+        }
+    </div>
+</div>
+
+@* Today's workout quick card *@
+@if (today != null)
+{
+    <div class="admin-card">
+        <div class="admin-card-header">
+            <div>
+                <div class="admin-card-title">Today's Workout — Day @today.DayNumber</div>
+                <div style="display:flex; gap:0.375rem; margin-top:0.25rem;">
+                    <span class="tag" style="background:@today.DayTypeColor;color:@today.DayTypeTextColor">@today.DayType</span>
+                    <span class="tag" style="background:@today.ThrowsFocusColor;color:@today.ThrowsFocusTextColor">@today.ThrowsFocus</span>
+                </div>
+            </div>
+            <div style="display:flex; gap:0.375rem;">
+                <a href="/Workout/Detail?date=@today.Date.ToString("yyyy-MM-dd")" class="btn" target="_blank">View</a>
+                <a href="/Admin/Workouts/Edit/@today.Id" class="btn btn-primary">Edit</a>
+                <form method="post" action="/Admin/Workouts/SwapFocus" style="display:inline;">
+                    <input type="hidden" name="id" value="@today.Id" />
+                    <button type="submit" class="btn">
+                        Swap to @(today.ThrowsFocus == "Shot Put" ? "Discus" : "Shot Put")
+                    </button>
+                </form>
+            </div>
+        </div>
+        @if (!string.IsNullOrEmpty(today.CoachNotes))
+        {
+            <div style="font-size:0.875rem; color: var(--text-muted); padding-top:0.5rem; border-top:1px solid var(--border);">
+                @today.CoachNotes
+            </div>
+        }
+    </div>
+}
+
+@* Upcoming meets *@
+@if (meets.Any())
+{
+    <div class="admin-card">
+        <div class="admin-card-header">
+            <div class="admin-card-title">Upcoming Meets</div>
+            <a href="/Admin/Meets" class="btn" style="font-size:0.75rem;">Manage</a>
+        </div>
+        <table class="admin-table">
+            <thead>
+                <tr><th>Date</th><th>Meet</th><th>Location</th><th>Type</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var meet in meets)
+                {
+                    <tr>
+                        <td style="white-space:nowrap;">@meet.Date.ToString("MMM d")</td>
+                        <td style="font-weight:600;">@meet.Name</td>
+                        <td>@meet.Location</td>
+                        <td><span class="tag" style="background:var(--gray-100);color:var(--gray-700);">@meet.MeetType</span></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

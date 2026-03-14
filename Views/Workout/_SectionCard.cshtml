@@ -1,0 +1,45 @@
+@{
+    var title = ViewData["Title"] as string ?? "";
+    var bgColor = ViewData["BgColor"] as string ?? "#1F4E79";
+    var textColor = ViewData["TextColor"] as string ?? "#ffffff";
+    var section = ViewData["Section"] as CloverleafThrows.Models.WorkoutSection;
+}
+
+<div class="section-card">
+    <div class="section-header" style="background: @bgColor; color: @textColor;">
+        @title
+    </div>
+    <div class="section-body">
+        @if (section == null || !section.Groups.Any())
+        {
+            <div class="exercise-row">
+                <span class="exercise-name" style="color: var(--text-muted); font-style: italic;">
+                    No exercises scheduled
+                </span>
+            </div>
+        }
+        else
+        {
+            @foreach (var group in section.Groups.OrderBy(g => g.SortOrder))
+            {
+                @if (!string.IsNullOrEmpty(group.Label))
+                {
+                    <div class="exercise-group-label">@group.Label</div>
+                }
+                @foreach (var ex in group.Exercises.OrderBy(e => e.SortOrder))
+                {
+                    <div class="exercise-row">
+                        <div class="exercise-left">
+                            @if (!string.IsNullOrEmpty(ex.Number))
+                            {
+                                <span class="exercise-num">@ex.Number</span>
+                            }
+                            <span class="exercise-name">@ex.ExerciseName</span>
+                        </div>
+                        <span class="exercise-reps">@ex.Reps</span>
+                    </div>
+                }
+            }
+        }
+    </div>
+</div>

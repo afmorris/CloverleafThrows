@@ -1,0 +1,83 @@
+@model CloverleafThrows.Models.Athlete
+@{
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+    var isNew = Model.Id == 0;
+    ViewData["Title"] = isNew ? "New Athlete" : $"Edit {Model.FullName}";
+    var throwEvents = new[] { "Shot Put", "Discus", "Hammer Throw", "Weight Throw", "Javelin" };
+}
+
+<div class="admin-page-header">
+    <h1>@ViewData["Title"]</h1>
+    <a href="/Admin/Athletes" class="btn">Back to Roster</a>
+</div>
+
+<div class="admin-card">
+    <form method="post" action="/Admin/Athletes/@(isNew ? "Create" : "Edit")">
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <div class="form-row-3">
+            <div class="form-group">
+                <label class="form-label">First Name</label>
+                <input type="text" name="FirstName" value="@Model.FirstName" class="form-input" required />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Last Name</label>
+                <input type="text" name="LastName" value="@Model.LastName" class="form-input" required />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Grad Year</label>
+                <input type="number" name="GradYear" value="@Model.GradYear" class="form-input" placeholder="e.g., 2027" />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Gender</label>
+                <select name="Gender" class="form-select">
+                    <option value="M" selected="@(Model.Gender == "M")">Boys</option>
+                    <option value="F" selected="@(Model.Gender == "F")">Girls</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Notes</label>
+                <input type="text" name="Notes" value="@Model.Notes" class="form-input" placeholder="Optional" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Events</label>
+            <div class="form-hint" style="margin-bottom:0.5rem;">Check events this athlete competes in. Mark one as primary.</div>
+            @for (int i = 0; i < throwEvents.Length; i++)
+            {
+                var ev = throwEvents[i];
+                var assigned = Model.Events.FirstOrDefault(e => e.EventName == ev);
+                var isChecked = assigned != null;
+                var isPrimary = assigned?.IsPrimary == true;
+
+                <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+                    <input type="checkbox" name="eventNames" value="@ev" @(isChecked ? "checked" : "") />
+                    <span style="width:120px; font-size:0.875rem;">@ev</span>
+                    <label style="font-size:0.75rem; color:var(--text-muted);">
+                        <input type="checkbox" name="primaryEvents" value="@i" @(isPrimary ? "checked" : "") /> Primary
+                    </label>
+                </div>
+            }
+        </div>
+
+        @if (!isNew)
+        {
+            <div class="form-group">
+                <label class="form-label">Status</label>
+                <select name="IsActive" class="form-select" style="width:auto;">
+                    <option value="true" selected="@Model.IsActive">Active</option>
+                    <option value="false" selected="@(!Model.IsActive)">Inactive</option>
+                </select>
+            </div>
+        }
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">@(isNew ? "Add Athlete" : "Save Changes")</button>
+            <a href="/Admin/Athletes" class="btn">Cancel</a>
+        </div>
+    </form>
+</div>

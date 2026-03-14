@@ -1,0 +1,3243 @@
+[
+  {
+    "dayNumber": 11,
+    "date": "2026-03-09",
+    "dayType": "Oly / Lower",
+    "throwsFocus": "Discus",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Lateral Line Hops",
+            "reps": "3 x 10 each"
+          },
+          {
+            "name": "Duck Walks",
+            "reps": "3 x 10y"
+          },
+          {
+            "name": "Broad Jumps",
+            "reps": "3 x 6"
+          },
+          {
+            "name": "Sprints",
+            "reps": "3 x 25y"
+          },
+          {
+            "name": "Sprints",
+            "reps": "3 x 10y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Pressers",
+            "reps": "x 20"
+          },
+          {
+            "name": "Front Raises",
+            "reps": "x 20"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 6"
+          },
+          {
+            "name": "Walking Line Throws",
+            "reps": "x 6"
+          },
+          {
+            "name": "Static Wheel",
+            "reps": "x 4"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "Toe Walks",
+            "reps": "2 x 15y",
+            "number": "W1"
+          },
+          {
+            "name": "Walking Quad+Ham Stretch",
+            "reps": "2 x 6 ea",
+            "number": "W2"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Power Clean + Front Squat",
+            "reps": "6 x 2/4",
+            "number": "1a"
+          }
+        ],
+        "label": "Compound"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Bulgarian Split Squat",
+            "reps": "5 x 6 ea",
+            "number": "2a"
+          },
+          {
+            "name": "BB RDL",
+            "reps": "5 x 6 ea",
+            "number": "2b"
+          }
+        ],
+        "label": "Superset 1"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Cossack Squats",
+            "reps": "4 x 6 ea",
+            "number": "3a"
+          },
+          {
+            "name": "Landmine Rot. Press",
+            "reps": "4 x 6 ea",
+            "number": "3b"
+          }
+        ],
+        "label": "Superset 2"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "Deep Squat Hold",
+            "reps": "2 x 1:00"
+          },
+          {
+            "name": "90/90 Hip Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Cat Cow",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Kneeling Lunge Hold",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Seated T-Spine Rotations",
+            "reps": "2 x 5 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Russian Twists",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Dead Bugs",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Side Plank",
+            "reps": "3 x 0:30 ea"
+          },
+          {
+            "name": "V-Ups",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Front Plank",
+            "reps": "3 x 1:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 12,
+    "date": "2026-03-10",
+    "dayType": "Upper Body",
+    "throwsFocus": "Shot Put",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "A-Skips",
+            "reps": "3 x 20y"
+          },
+          {
+            "name": "Power Skips for Height",
+            "reps": "3 x 6 each"
+          },
+          {
+            "name": "Speed Skaters",
+            "reps": "3 x 8 each"
+          },
+          {
+            "name": "Plyo Push-Ups",
+            "reps": "3 x 5"
+          },
+          {
+            "name": "Striders",
+            "reps": "3 x 25y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Drivers",
+            "reps": "x 20"
+          },
+          {
+            "name": "Overhead Throws",
+            "reps": "x 20"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 8"
+          },
+          {
+            "name": "Side Shuffles",
+            "reps": "x 6"
+          },
+          {
+            "name": "Step Back Glides",
+            "reps": "x 4"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "Band Pull-Aparts",
+            "reps": "2 x 15",
+            "number": "W1"
+          },
+          {
+            "name": "PVC Pass-Throughs",
+            "reps": "2 x 10",
+            "number": "W2"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "BB Bench Press",
+            "reps": "5 x 5",
+            "number": "1a"
+          },
+          {
+            "name": "BB Bent Over Row",
+            "reps": "5 x 5",
+            "number": "1b"
+          }
+        ],
+        "label": "Superset 1"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Incline Press",
+            "reps": "4 x 8",
+            "number": "2a"
+          },
+          {
+            "name": "Pull-Ups (band-assist OK)",
+            "reps": "4 x 8",
+            "number": "2b"
+          }
+        ],
+        "label": "Superset 2"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Reverse Flys",
+            "reps": "3 x 12",
+            "number": "3a"
+          },
+          {
+            "name": "DB Lateral Raise",
+            "reps": "3 x 10",
+            "number": "3b"
+          }
+        ],
+        "label": "Superset 3"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "World's Greatest Stretch",
+            "reps": "2 x 5 ea"
+          },
+          {
+            "name": "Pigeon Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Scorpion",
+            "reps": "2 x 8 ea"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Wall Slide",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Banded Shoulder ER",
+            "reps": "2 x 10 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Slam + Rotate",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Pallof Press Hold",
+            "reps": "3 x 0:20 ea"
+          },
+          {
+            "name": "Bicycle Crunches",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Bird Dogs",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Suitcase Carry",
+            "reps": "3 x 30y ea"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 13,
+    "date": "2026-03-11",
+    "dayType": "Throwing Only",
+    "throwsFocus": "Discus",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Broad Jump to Sprint",
+            "reps": "3 x 25y"
+          },
+          {
+            "name": "Tuck Jumps",
+            "reps": "3 x 5"
+          },
+          {
+            "name": "Bear Crawls",
+            "reps": "3 x 15y"
+          },
+          {
+            "name": "Twisting Sit-Ups",
+            "reps": "3 x 10 each"
+          },
+          {
+            "name": "Sprints",
+            "reps": "3 x 10y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Pressers",
+            "reps": "x 20"
+          },
+          {
+            "name": "Front Raises",
+            "reps": "x 20"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 6"
+          },
+          {
+            "name": "Walking Line Throws",
+            "reps": "x 6"
+          },
+          {
+            "name": "Static Wheel",
+            "reps": "x 4"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "No Lifting",
+            "reps": "Rest / Recovery"
+          }
+        ]
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "Deep Squat Hold",
+            "reps": "2 x 1:00"
+          },
+          {
+            "name": "90/90 Hip Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Cat Cow",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Kneeling Lunge Hold",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Seated T-Spine Rotations",
+            "reps": "2 x 5 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Russian Twists",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Dead Bugs",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Side Plank",
+            "reps": "3 x 0:30 ea"
+          },
+          {
+            "name": "V-Ups",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Front Plank",
+            "reps": "3 x 1:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 14,
+    "date": "2026-03-12",
+    "dayType": "Jump / Sprint",
+    "throwsFocus": "Shot Put",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Double Broad Jumps",
+            "reps": "3 x 5"
+          },
+          {
+            "name": "Backward Run",
+            "reps": "3 x 20y"
+          },
+          {
+            "name": "Squat Jumps",
+            "reps": "3 x 6"
+          },
+          {
+            "name": "Lateral Line Hops",
+            "reps": "3 x 10 each"
+          },
+          {
+            "name": "Skipping for Distance",
+            "reps": "3 x 25y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Drivers",
+            "reps": "x 15"
+          },
+          {
+            "name": "Overhead Throws",
+            "reps": "x 15"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 6"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "A-Skips",
+            "reps": "2 x 20y",
+            "number": "1a"
+          },
+          {
+            "name": "High Knees",
+            "reps": "2 x 20y",
+            "number": "1b"
+          },
+          {
+            "name": "Butt Kicks",
+            "reps": "2 x 20y",
+            "number": "1c"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Box Jumps",
+            "reps": "4 x 3",
+            "number": "2a"
+          },
+          {
+            "name": "Hurdle Hops",
+            "reps": "4 x 5",
+            "number": "2b"
+          },
+          {
+            "name": "Broad Jumps",
+            "reps": "4 x 3",
+            "number": "2c"
+          }
+        ],
+        "label": "Plyometrics"
+      },
+      {
+        "exercises": [
+          {
+            "name": "10m Acceleration",
+            "reps": "x 4",
+            "number": "3a"
+          },
+          {
+            "name": "30m Fly Sprint",
+            "reps": "x 4",
+            "number": "3b"
+          }
+        ],
+        "label": "Sprints"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "Ankle Circles",
+            "reps": "2 x 10 ea"
+          },
+          {
+            "name": "Leg Swings (front/lateral)",
+            "reps": "2 x 10 ea"
+          },
+          {
+            "name": "Walking Knee Hugs",
+            "reps": "2 x 10"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "Hollow Body Hold",
+            "reps": "3 x 0:30"
+          },
+          {
+            "name": "MB Overhead Throw",
+            "reps": "3 x 6"
+          },
+          {
+            "name": "Plank Shoulder Taps",
+            "reps": "3 x 10 ea"
+          }
+        ]
+      }
+    ],
+    "coachNotes": "Boys & Girls same drills/reps. Focus: power position in the glide, staying connected through the middle."
+  },
+  {
+    "dayNumber": 15,
+    "date": "2026-03-13",
+    "dayType": "Full Body",
+    "throwsFocus": "Discus",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Single Leg Hops",
+            "reps": "3 x 10y each"
+          },
+          {
+            "name": "Power Skips for Height",
+            "reps": "3 x 6 each"
+          },
+          {
+            "name": "Clap Push-Ups",
+            "reps": "3 x 5"
+          },
+          {
+            "name": "Duck Walks",
+            "reps": "3 x 10y"
+          },
+          {
+            "name": "Sprints",
+            "reps": "3 x 25y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Pressers",
+            "reps": "x 20"
+          },
+          {
+            "name": "Front Raises",
+            "reps": "x 20"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 6"
+          },
+          {
+            "name": "Walking Line Throws",
+            "reps": "x 6"
+          },
+          {
+            "name": "Static Wheel",
+            "reps": "x 4"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "Inchworms",
+            "reps": "2 x 5",
+            "number": "W1"
+          },
+          {
+            "name": "Hip Circle Walks",
+            "reps": "2 x 10 ea",
+            "number": "W2"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Hang Clean",
+            "reps": "5 x 3",
+            "number": "1a"
+          },
+          {
+            "name": "Back Squat",
+            "reps": "5 x 5",
+            "number": "1b"
+          }
+        ],
+        "label": "Compound"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Step-Ups",
+            "reps": "4 x 6 ea",
+            "number": "2a"
+          },
+          {
+            "name": "DB Single Arm Row",
+            "reps": "4 x 8 ea",
+            "number": "2b"
+          }
+        ],
+        "label": "Superset 1"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Single-Leg RDL",
+            "reps": "3 x 6 ea",
+            "number": "3a"
+          },
+          {
+            "name": "Push-Ups",
+            "reps": "3 x 12",
+            "number": "3b"
+          }
+        ],
+        "label": "Superset 2"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "World's Greatest Stretch",
+            "reps": "2 x 5 ea"
+          },
+          {
+            "name": "Pigeon Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Scorpion",
+            "reps": "2 x 8 ea"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Wall Slide",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Banded Shoulder ER",
+            "reps": "2 x 10 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Slam + Rotate",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Pallof Press Hold",
+            "reps": "3 x 0:20 ea"
+          },
+          {
+            "name": "Bicycle Crunches",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Bird Dogs",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Suitcase Carry",
+            "reps": "3 x 30y ea"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 16,
+    "date": "2026-03-16",
+    "dayType": "Oly / Lower",
+    "throwsFocus": "Shot Put",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Bounds",
+            "reps": "3 x 15y"
+          },
+          {
+            "name": "Tuck Jumps",
+            "reps": "3 x 5"
+          },
+          {
+            "name": "Bear Crawls",
+            "reps": "3 x 15y"
+          },
+          {
+            "name": "A-Skips",
+            "reps": "3 x 20y"
+          },
+          {
+            "name": "Sprints",
+            "reps": "3 x 10y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Drivers",
+            "reps": "x 15"
+          },
+          {
+            "name": "Overhead Throws",
+            "reps": "x 15"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 8"
+          },
+          {
+            "name": "Side Shuffles",
+            "reps": "x 6"
+          },
+          {
+            "name": "Step Back Glides",
+            "reps": "x 6"
+          },
+          {
+            "name": "Glide Shuffles",
+            "reps": "x 3"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "Toe Walks",
+            "reps": "2 x 15y",
+            "number": "W1"
+          },
+          {
+            "name": "Walking Quad+Ham Stretch",
+            "reps": "2 x 6 ea",
+            "number": "W2"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Power Clean + Front Squat",
+            "reps": "6 x 2/4",
+            "number": "1a"
+          }
+        ],
+        "label": "Compound"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Bulgarian Split Squat",
+            "reps": "5 x 6 ea",
+            "number": "2a"
+          },
+          {
+            "name": "BB RDL",
+            "reps": "5 x 6 ea",
+            "number": "2b"
+          }
+        ],
+        "label": "Superset 1"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Cossack Squats",
+            "reps": "4 x 6 ea",
+            "number": "3a"
+          },
+          {
+            "name": "Landmine Rot. Press",
+            "reps": "4 x 6 ea",
+            "number": "3b"
+          }
+        ],
+        "label": "Superset 2"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "Deep Squat Hold",
+            "reps": "2 x 1:00"
+          },
+          {
+            "name": "90/90 Hip Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Cat Cow",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Kneeling Lunge Hold",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Seated T-Spine Rotations",
+            "reps": "2 x 5 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Russian Twists",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Dead Bugs",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Side Plank",
+            "reps": "3 x 0:30 ea"
+          },
+          {
+            "name": "V-Ups",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Front Plank",
+            "reps": "3 x 1:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 17,
+    "date": "2026-03-17",
+    "dayType": "Upper Body",
+    "throwsFocus": "Discus",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Skipping for Distance",
+            "reps": "3 x 25y"
+          },
+          {
+            "name": "Speed Skaters",
+            "reps": "3 x 10 each"
+          },
+          {
+            "name": "Squat Jumps",
+            "reps": "3 x 6"
+          },
+          {
+            "name": "Twisting Sit-Ups",
+            "reps": "3 x 10 each"
+          },
+          {
+            "name": "Striders",
+            "reps": "3 x 30y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Pressers",
+            "reps": "x 15"
+          },
+          {
+            "name": "Front Raises",
+            "reps": "x 15"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 8"
+          },
+          {
+            "name": "Walking Line Throws",
+            "reps": "x 6"
+          },
+          {
+            "name": "Static Wheel",
+            "reps": "x 6"
+          },
+          {
+            "name": "Dynamic Wheel",
+            "reps": "x 3"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "Band Pull-Aparts",
+            "reps": "2 x 15",
+            "number": "W1"
+          },
+          {
+            "name": "PVC Pass-Throughs",
+            "reps": "2 x 10",
+            "number": "W2"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "BB Bench Press",
+            "reps": "5 x 5",
+            "number": "1a"
+          },
+          {
+            "name": "BB Bent Over Row",
+            "reps": "5 x 5",
+            "number": "1b"
+          }
+        ],
+        "label": "Superset 1"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Incline Press",
+            "reps": "4 x 8",
+            "number": "2a"
+          },
+          {
+            "name": "Pull-Ups (band-assist OK)",
+            "reps": "4 x 8",
+            "number": "2b"
+          }
+        ],
+        "label": "Superset 2"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Reverse Flys",
+            "reps": "3 x 12",
+            "number": "3a"
+          },
+          {
+            "name": "DB Lateral Raise",
+            "reps": "3 x 10",
+            "number": "3b"
+          }
+        ],
+        "label": "Superset 3"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "World's Greatest Stretch",
+            "reps": "2 x 5 ea"
+          },
+          {
+            "name": "Pigeon Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Scorpion",
+            "reps": "2 x 8 ea"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Wall Slide",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Banded Shoulder ER",
+            "reps": "2 x 10 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Slam + Rotate",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Pallof Press Hold",
+            "reps": "3 x 0:20 ea"
+          },
+          {
+            "name": "Bicycle Crunches",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Bird Dogs",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Suitcase Carry",
+            "reps": "3 x 30y ea"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 18,
+    "date": "2026-03-18",
+    "dayType": "Throwing Only",
+    "throwsFocus": "Shot Put",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Backward Run",
+            "reps": "3 x 20y"
+          },
+          {
+            "name": "Broad Jump to Sprint",
+            "reps": "3 x 25y"
+          },
+          {
+            "name": "Power Skips for Height",
+            "reps": "3 x 6 each"
+          },
+          {
+            "name": "Plyo Push-Ups",
+            "reps": "3 x 6"
+          },
+          {
+            "name": "Sprints",
+            "reps": "3 x 10y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Drivers",
+            "reps": "x 15"
+          },
+          {
+            "name": "Overhead Throws",
+            "reps": "x 15"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 8"
+          },
+          {
+            "name": "Side Shuffles",
+            "reps": "x 6"
+          },
+          {
+            "name": "Step Back Glides",
+            "reps": "x 6"
+          },
+          {
+            "name": "Glide Shuffles",
+            "reps": "x 3"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "No Lifting",
+            "reps": "Rest / Recovery"
+          }
+        ]
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "Deep Squat Hold",
+            "reps": "2 x 1:00"
+          },
+          {
+            "name": "90/90 Hip Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Cat Cow",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Kneeling Lunge Hold",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Seated T-Spine Rotations",
+            "reps": "2 x 5 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Russian Twists",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Dead Bugs",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Side Plank",
+            "reps": "3 x 0:30 ea"
+          },
+          {
+            "name": "V-Ups",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Front Plank",
+            "reps": "3 x 1:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 19,
+    "date": "2026-03-19",
+    "dayType": "Jump / Sprint",
+    "throwsFocus": "Discus",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Double Broad Jumps",
+            "reps": "3 x 5"
+          },
+          {
+            "name": "Tuck Jumps",
+            "reps": "3 x 6"
+          },
+          {
+            "name": "Lateral Line Hops",
+            "reps": "3 x 10 each"
+          },
+          {
+            "name": "Bear Crawls",
+            "reps": "3 x 15y"
+          },
+          {
+            "name": "Striders",
+            "reps": "3 x 25y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Pressers",
+            "reps": "x 15"
+          },
+          {
+            "name": "Front Raises",
+            "reps": "x 15"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 6"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "A-Skips",
+            "reps": "2 x 20y",
+            "number": "1a"
+          },
+          {
+            "name": "High Knees",
+            "reps": "2 x 20y",
+            "number": "1b"
+          },
+          {
+            "name": "Butt Kicks",
+            "reps": "2 x 20y",
+            "number": "1c"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Box Jumps",
+            "reps": "4 x 3",
+            "number": "2a"
+          },
+          {
+            "name": "Hurdle Hops",
+            "reps": "4 x 5",
+            "number": "2b"
+          },
+          {
+            "name": "Broad Jumps",
+            "reps": "4 x 3",
+            "number": "2c"
+          }
+        ],
+        "label": "Plyometrics"
+      },
+      {
+        "exercises": [
+          {
+            "name": "10m Acceleration",
+            "reps": "x 4",
+            "number": "3a"
+          },
+          {
+            "name": "30m Fly Sprint",
+            "reps": "x 4",
+            "number": "3b"
+          }
+        ],
+        "label": "Sprints"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "Ankle Circles",
+            "reps": "2 x 10 ea"
+          },
+          {
+            "name": "Leg Swings (front/lateral)",
+            "reps": "2 x 10 ea"
+          },
+          {
+            "name": "Walking Knee Hugs",
+            "reps": "2 x 10"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "Hollow Body Hold",
+            "reps": "3 x 0:30"
+          },
+          {
+            "name": "MB Overhead Throw",
+            "reps": "3 x 6"
+          },
+          {
+            "name": "Plank Shoulder Taps",
+            "reps": "3 x 10 ea"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 20,
+    "date": "2026-03-20",
+    "dayType": "Full Body",
+    "throwsFocus": "Shot Put",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Broad Jumps",
+            "reps": "3 x 6"
+          },
+          {
+            "name": "Skipping for Distance",
+            "reps": "3 x 25y"
+          },
+          {
+            "name": "Clap Push-Ups",
+            "reps": "3 x 6"
+          },
+          {
+            "name": "Single Leg Hops",
+            "reps": "3 x 10y each"
+          },
+          {
+            "name": "Backward Run",
+            "reps": "3 x 20y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Drivers",
+            "reps": "x 15"
+          },
+          {
+            "name": "Overhead Throws",
+            "reps": "x 15"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 8"
+          },
+          {
+            "name": "Side Shuffles",
+            "reps": "x 6"
+          },
+          {
+            "name": "Step Back Glides",
+            "reps": "x 6"
+          },
+          {
+            "name": "Glide Shuffles",
+            "reps": "x 3"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "Inchworms",
+            "reps": "2 x 5",
+            "number": "W1"
+          },
+          {
+            "name": "Hip Circle Walks",
+            "reps": "2 x 10 ea",
+            "number": "W2"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Hang Clean",
+            "reps": "5 x 3",
+            "number": "1a"
+          },
+          {
+            "name": "Back Squat",
+            "reps": "5 x 5",
+            "number": "1b"
+          }
+        ],
+        "label": "Compound"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Step-Ups",
+            "reps": "4 x 6 ea",
+            "number": "2a"
+          },
+          {
+            "name": "DB Single Arm Row",
+            "reps": "4 x 8 ea",
+            "number": "2b"
+          }
+        ],
+        "label": "Superset 1"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Single-Leg RDL",
+            "reps": "3 x 6 ea",
+            "number": "3a"
+          },
+          {
+            "name": "Push-Ups",
+            "reps": "3 x 12",
+            "number": "3b"
+          }
+        ],
+        "label": "Superset 2"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "World's Greatest Stretch",
+            "reps": "2 x 5 ea"
+          },
+          {
+            "name": "Pigeon Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Scorpion",
+            "reps": "2 x 8 ea"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Wall Slide",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Banded Shoulder ER",
+            "reps": "2 x 10 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Slam + Rotate",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Pallof Press Hold",
+            "reps": "3 x 0:20 ea"
+          },
+          {
+            "name": "Bicycle Crunches",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Bird Dogs",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Suitcase Carry",
+            "reps": "3 x 30y ea"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 21,
+    "date": "2026-03-23",
+    "dayType": "Oly / Lower",
+    "throwsFocus": "Discus",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Power Skips for Height",
+            "reps": "3 x 8 each"
+          },
+          {
+            "name": "Bounds",
+            "reps": "3 x 15y"
+          },
+          {
+            "name": "Squat Jumps",
+            "reps": "3 x 8"
+          },
+          {
+            "name": "Twisting Sit-Ups",
+            "reps": "3 x 12 each"
+          },
+          {
+            "name": "Sprints",
+            "reps": "3 x 10y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Pressers",
+            "reps": "x 10"
+          },
+          {
+            "name": "Front Raises",
+            "reps": "x 10"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 8"
+          },
+          {
+            "name": "Dynamic Wheel",
+            "reps": "x 6"
+          },
+          {
+            "name": "South Africans",
+            "reps": "x 6"
+          },
+          {
+            "name": "Full Throws",
+            "reps": "x 3"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "Toe Walks",
+            "reps": "2 x 15y",
+            "number": "W1"
+          },
+          {
+            "name": "Walking Quad+Ham Stretch",
+            "reps": "2 x 6 ea",
+            "number": "W2"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Power Clean + Front Squat",
+            "reps": "5 x 2/3 (increase wt)",
+            "number": "1a"
+          }
+        ],
+        "label": "Compound"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Bulgarian Split Squat",
+            "reps": "4 x 8 ea",
+            "number": "2a"
+          },
+          {
+            "name": "BB RDL",
+            "reps": "4 x 8 ea",
+            "number": "2b"
+          }
+        ],
+        "label": "Superset 1"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Cossack Squats",
+            "reps": "3 x 8 ea",
+            "number": "3a"
+          },
+          {
+            "name": "Landmine Rot. Press",
+            "reps": "3 x 8 ea",
+            "number": "3b"
+          }
+        ],
+        "label": "Superset 2"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "Deep Squat Hold",
+            "reps": "2 x 1:00"
+          },
+          {
+            "name": "90/90 Hip Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Cat Cow",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Kneeling Lunge Hold",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Seated T-Spine Rotations",
+            "reps": "2 x 5 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Russian Twists",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Dead Bugs",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Side Plank",
+            "reps": "3 x 0:30 ea"
+          },
+          {
+            "name": "V-Ups",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Front Plank",
+            "reps": "3 x 1:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 22,
+    "date": "2026-03-24",
+    "dayType": "Upper Body",
+    "throwsFocus": "Shot Put",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "A-Skips",
+            "reps": "3 x 20y"
+          },
+          {
+            "name": "Tuck Jumps",
+            "reps": "3 x 6"
+          },
+          {
+            "name": "Bear Crawls",
+            "reps": "3 x 15y"
+          },
+          {
+            "name": "Speed Skaters",
+            "reps": "3 x 10 each"
+          },
+          {
+            "name": "Skipping for Distance",
+            "reps": "3 x 30y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Drivers",
+            "reps": "x 10"
+          },
+          {
+            "name": "Overhead Throws",
+            "reps": "x 10"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 8"
+          },
+          {
+            "name": "Step Back Glides",
+            "reps": "x 6"
+          },
+          {
+            "name": "Glide Shuffles",
+            "reps": "x 6"
+          },
+          {
+            "name": "Full Throws",
+            "reps": "x 3"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "Band Pull-Aparts",
+            "reps": "2 x 15",
+            "number": "W1"
+          },
+          {
+            "name": "PVC Pass-Throughs",
+            "reps": "2 x 10",
+            "number": "W2"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "BB Bench Press",
+            "reps": "4 x 6 (increase wt)",
+            "number": "1a"
+          },
+          {
+            "name": "BB Bent Over Row",
+            "reps": "4 x 6",
+            "number": "1b"
+          }
+        ],
+        "label": "Superset 1"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Incline Press",
+            "reps": "4 x 8",
+            "number": "2a"
+          },
+          {
+            "name": "Pull-Ups (band-assist OK)",
+            "reps": "4 x 8",
+            "number": "2b"
+          }
+        ],
+        "label": "Superset 2"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Reverse Flys",
+            "reps": "3 x 12",
+            "number": "3a"
+          },
+          {
+            "name": "DB Lateral Raise",
+            "reps": "3 x 10",
+            "number": "3b"
+          }
+        ],
+        "label": "Superset 3"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "World's Greatest Stretch",
+            "reps": "2 x 5 ea"
+          },
+          {
+            "name": "Pigeon Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Scorpion",
+            "reps": "2 x 8 ea"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Wall Slide",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Banded Shoulder ER",
+            "reps": "2 x 10 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Slam + Rotate",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Pallof Press Hold",
+            "reps": "3 x 0:20 ea"
+          },
+          {
+            "name": "Bicycle Crunches",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Bird Dogs",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Suitcase Carry",
+            "reps": "3 x 30y ea"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 23,
+    "date": "2026-03-25",
+    "dayType": "Throwing Only",
+    "throwsFocus": "Discus",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Broad Jump to Sprint",
+            "reps": "3 x 10y"
+          },
+          {
+            "name": "Double Broad Jumps",
+            "reps": "4 x 5"
+          },
+          {
+            "name": "Backward Run",
+            "reps": "3 x 20y"
+          },
+          {
+            "name": "Plyo Push-Ups",
+            "reps": "3 x 8"
+          },
+          {
+            "name": "Striders",
+            "reps": "3 x 30y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Pressers",
+            "reps": "x 10"
+          },
+          {
+            "name": "Front Raises",
+            "reps": "x 10"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 8"
+          },
+          {
+            "name": "Dynamic Wheel",
+            "reps": "x 6"
+          },
+          {
+            "name": "South Africans",
+            "reps": "x 6"
+          },
+          {
+            "name": "Full Throws",
+            "reps": "x 3"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "No Lifting",
+            "reps": "Rest / Recovery"
+          }
+        ]
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "Deep Squat Hold",
+            "reps": "2 x 1:00"
+          },
+          {
+            "name": "90/90 Hip Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Cat Cow",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Kneeling Lunge Hold",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Seated T-Spine Rotations",
+            "reps": "2 x 5 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Russian Twists",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Dead Bugs",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Side Plank",
+            "reps": "3 x 0:30 ea"
+          },
+          {
+            "name": "V-Ups",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Front Plank",
+            "reps": "3 x 1:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 24,
+    "date": "2026-03-26",
+    "dayType": "Jump / Sprint",
+    "throwsFocus": "Shot Put",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Squat Jumps",
+            "reps": "3 x 8"
+          },
+          {
+            "name": "Lateral Line Hops",
+            "reps": "3 x 10 each"
+          },
+          {
+            "name": "Power Skips for Height",
+            "reps": "3 x 8 each"
+          },
+          {
+            "name": "Duck Walks",
+            "reps": "3 x 10y"
+          },
+          {
+            "name": "Sprints",
+            "reps": "3 x 25y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Drivers",
+            "reps": "x 10"
+          },
+          {
+            "name": "Overhead Throws",
+            "reps": "x 10"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 6"
+          },
+          {
+            "name": "Step Back Glides",
+            "reps": "x 3"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "A-Skips",
+            "reps": "2 x 20y",
+            "number": "1a"
+          },
+          {
+            "name": "High Knees",
+            "reps": "2 x 20y",
+            "number": "1b"
+          },
+          {
+            "name": "Butt Kicks",
+            "reps": "2 x 20y",
+            "number": "1c"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Box Jumps",
+            "reps": "5 x 3",
+            "number": "2a"
+          },
+          {
+            "name": "Hurdle Hops",
+            "reps": "5 x 5",
+            "number": "2b"
+          },
+          {
+            "name": "Single-Leg Box Jump",
+            "reps": "3 x 3 ea",
+            "number": "2c"
+          }
+        ],
+        "label": "Plyometrics"
+      },
+      {
+        "exercises": [
+          {
+            "name": "10m Acceleration",
+            "reps": "x 5",
+            "number": "3a"
+          },
+          {
+            "name": "30m Fly Sprint",
+            "reps": "x 4",
+            "number": "3b"
+          }
+        ],
+        "label": "Sprints"
+      },
+      {
+        "exercises": [
+          {
+            "name": "MB Chest Pass",
+            "reps": "3 x 6",
+            "number": "4a"
+          },
+          {
+            "name": "MB Overhead Throw",
+            "reps": "3 x 6",
+            "number": "4b"
+          },
+          {
+            "name": "MB Rotational Throw",
+            "reps": "3 x 4 ea",
+            "number": "4c"
+          }
+        ],
+        "label": "Med Ball"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "Ankle Circles",
+            "reps": "2 x 10 ea"
+          },
+          {
+            "name": "Leg Swings (front/lateral)",
+            "reps": "2 x 10 ea"
+          },
+          {
+            "name": "Walking Knee Hugs",
+            "reps": "2 x 10"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "Hollow Body Hold",
+            "reps": "3 x 0:30"
+          },
+          {
+            "name": "MB Overhead Throw",
+            "reps": "3 x 6"
+          },
+          {
+            "name": "Plank Shoulder Taps",
+            "reps": "3 x 10 ea"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 25,
+    "date": "2026-03-27",
+    "dayType": "Full Body",
+    "throwsFocus": "Discus",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Tuck Jumps",
+            "reps": "3 x 6"
+          },
+          {
+            "name": "Single Leg Hops",
+            "reps": "3 x 10y each"
+          },
+          {
+            "name": "Clap Push-Ups",
+            "reps": "3 x 8"
+          },
+          {
+            "name": "Skipping for Distance",
+            "reps": "3 x 25y"
+          },
+          {
+            "name": "Bear Crawls",
+            "reps": "3 x 15y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Pressers",
+            "reps": "x 10"
+          },
+          {
+            "name": "Front Raises",
+            "reps": "x 10"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 8"
+          },
+          {
+            "name": "Dynamic Wheel",
+            "reps": "x 6"
+          },
+          {
+            "name": "South Africans",
+            "reps": "x 6"
+          },
+          {
+            "name": "Full Throws",
+            "reps": "x 3"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "Inchworms",
+            "reps": "2 x 5",
+            "number": "W1"
+          },
+          {
+            "name": "Hip Circle Walks",
+            "reps": "2 x 10 ea",
+            "number": "W2"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Hang Clean",
+            "reps": "5 x 3 (increase wt)",
+            "number": "1a"
+          },
+          {
+            "name": "Back Squat",
+            "reps": "4 x 5 (increase wt)",
+            "number": "1b"
+          }
+        ],
+        "label": "Compound"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Step-Ups",
+            "reps": "4 x 6 ea",
+            "number": "2a"
+          },
+          {
+            "name": "DB Single Arm Row",
+            "reps": "4 x 8 ea",
+            "number": "2b"
+          }
+        ],
+        "label": "Superset 1"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Single-Leg RDL",
+            "reps": "3 x 8 ea",
+            "number": "3a"
+          },
+          {
+            "name": "Push-Ups (weighted)",
+            "reps": "3 x 10",
+            "number": "3b"
+          }
+        ],
+        "label": "Superset 2"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "World's Greatest Stretch",
+            "reps": "2 x 5 ea"
+          },
+          {
+            "name": "Pigeon Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Scorpion",
+            "reps": "2 x 8 ea"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Wall Slide",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Banded Shoulder ER",
+            "reps": "2 x 10 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Slam + Rotate",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Pallof Press Hold",
+            "reps": "3 x 0:20 ea"
+          },
+          {
+            "name": "Bicycle Crunches",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Bird Dogs",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Suitcase Carry",
+            "reps": "3 x 30y ea"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 26,
+    "date": "2026-03-30",
+    "dayType": "Oly / Lower",
+    "throwsFocus": "Shot Put",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Bounds",
+            "reps": "3 x 15y"
+          },
+          {
+            "name": "Power Skips for Height",
+            "reps": "3 x 8 each"
+          },
+          {
+            "name": "Twisting Sit-Ups",
+            "reps": "3 x 12 each"
+          },
+          {
+            "name": "Backward Run",
+            "reps": "3 x 20y"
+          },
+          {
+            "name": "Sprints",
+            "reps": "3 x 10y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Drivers",
+            "reps": "x 10"
+          },
+          {
+            "name": "Overhead Throws",
+            "reps": "x 10"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 6"
+          },
+          {
+            "name": "Glide Shuffles",
+            "reps": "x 6"
+          },
+          {
+            "name": "Full Throws",
+            "reps": "x 5"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "Toe Walks",
+            "reps": "2 x 15y",
+            "number": "W1"
+          },
+          {
+            "name": "Walking Quad+Ham Stretch",
+            "reps": "2 x 6 ea",
+            "number": "W2"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Power Clean + Front Squat",
+            "reps": "5 x 2/3 (increase wt)",
+            "number": "1a"
+          }
+        ],
+        "label": "Compound"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Bulgarian Split Squat",
+            "reps": "4 x 8 ea",
+            "number": "2a"
+          },
+          {
+            "name": "BB RDL",
+            "reps": "4 x 8 ea",
+            "number": "2b"
+          }
+        ],
+        "label": "Superset 1"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Cossack Squats",
+            "reps": "3 x 8 ea",
+            "number": "3a"
+          },
+          {
+            "name": "Landmine Rot. Press",
+            "reps": "3 x 8 ea",
+            "number": "3b"
+          }
+        ],
+        "label": "Superset 2"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "Deep Squat Hold",
+            "reps": "2 x 1:00"
+          },
+          {
+            "name": "90/90 Hip Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Cat Cow",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Kneeling Lunge Hold",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Seated T-Spine Rotations",
+            "reps": "2 x 5 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Russian Twists",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Dead Bugs",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Side Plank",
+            "reps": "3 x 0:30 ea"
+          },
+          {
+            "name": "V-Ups",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Front Plank",
+            "reps": "3 x 1:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 27,
+    "date": "2026-03-31",
+    "dayType": "Upper Body",
+    "throwsFocus": "Discus",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Broad Jump to Sprint",
+            "reps": "3 x 25y"
+          },
+          {
+            "name": "Squat Jumps",
+            "reps": "3 x 8"
+          },
+          {
+            "name": "Bear Crawls",
+            "reps": "3 x 15y"
+          },
+          {
+            "name": "Speed Skaters",
+            "reps": "3 x 10 each"
+          },
+          {
+            "name": "Striders",
+            "reps": "3 x 30y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Pressers",
+            "reps": "x 10"
+          },
+          {
+            "name": "Front Raises",
+            "reps": "x 10"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 6"
+          },
+          {
+            "name": "South Africans",
+            "reps": "x 6"
+          },
+          {
+            "name": "Full Throws",
+            "reps": "x 5"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "Band Pull-Aparts",
+            "reps": "2 x 15",
+            "number": "W1"
+          },
+          {
+            "name": "PVC Pass-Throughs",
+            "reps": "2 x 10",
+            "number": "W2"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "BB Bench Press",
+            "reps": "4 x 6 (increase wt)",
+            "number": "1a"
+          },
+          {
+            "name": "BB Bent Over Row",
+            "reps": "4 x 6",
+            "number": "1b"
+          }
+        ],
+        "label": "Superset 1"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Incline Press",
+            "reps": "4 x 8",
+            "number": "2a"
+          },
+          {
+            "name": "Pull-Ups (band-assist OK)",
+            "reps": "4 x 8",
+            "number": "2b"
+          }
+        ],
+        "label": "Superset 2"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Reverse Flys",
+            "reps": "3 x 12",
+            "number": "3a"
+          },
+          {
+            "name": "DB Lateral Raise",
+            "reps": "3 x 10",
+            "number": "3b"
+          }
+        ],
+        "label": "Superset 3"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "World's Greatest Stretch",
+            "reps": "2 x 5 ea"
+          },
+          {
+            "name": "Pigeon Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Scorpion",
+            "reps": "2 x 8 ea"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Wall Slide",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Banded Shoulder ER",
+            "reps": "2 x 10 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Slam + Rotate",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Pallof Press Hold",
+            "reps": "3 x 0:20 ea"
+          },
+          {
+            "name": "Bicycle Crunches",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Bird Dogs",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Suitcase Carry",
+            "reps": "3 x 30y ea"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 28,
+    "date": "2026-04-01",
+    "dayType": "Throwing Only",
+    "throwsFocus": "Shot Put",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Tuck Jumps",
+            "reps": "3 x 8"
+          },
+          {
+            "name": "A-Skips",
+            "reps": "3 x 20y"
+          },
+          {
+            "name": "Double Broad Jumps",
+            "reps": "4 x 5"
+          },
+          {
+            "name": "Plyo Push-Ups",
+            "reps": "3 x 8"
+          },
+          {
+            "name": "Skipping for Distance",
+            "reps": "3 x 30y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Drivers",
+            "reps": "x 10"
+          },
+          {
+            "name": "Overhead Throws",
+            "reps": "x 10"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 6"
+          },
+          {
+            "name": "Glide Shuffles",
+            "reps": "x 6"
+          },
+          {
+            "name": "Full Throws",
+            "reps": "x 5"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "No Lifting",
+            "reps": "Rest / Recovery"
+          }
+        ]
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "Deep Squat Hold",
+            "reps": "2 x 1:00"
+          },
+          {
+            "name": "90/90 Hip Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Cat Cow",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Kneeling Lunge Hold",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Seated T-Spine Rotations",
+            "reps": "2 x 5 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Russian Twists",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Dead Bugs",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Side Plank",
+            "reps": "3 x 0:30 ea"
+          },
+          {
+            "name": "V-Ups",
+            "reps": "3 x 10"
+          },
+          {
+            "name": "Front Plank",
+            "reps": "3 x 1:00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 29,
+    "date": "2026-04-02",
+    "dayType": "Jump / Sprint",
+    "throwsFocus": "Discus",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Power Skips for Height",
+            "reps": "3 x 8 each"
+          },
+          {
+            "name": "Lateral Line Hops",
+            "reps": "3 x 10 each"
+          },
+          {
+            "name": "Backward Run",
+            "reps": "3 x 20y"
+          },
+          {
+            "name": "Squat Jumps",
+            "reps": "3 x 8"
+          },
+          {
+            "name": "Sprints",
+            "reps": "3 x 25y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Pressers",
+            "reps": "x 10"
+          },
+          {
+            "name": "Front Raises",
+            "reps": "x 10"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 6"
+          },
+          {
+            "name": "Static Wheel",
+            "reps": "x 3"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "A-Skips",
+            "reps": "2 x 20y",
+            "number": "1a"
+          },
+          {
+            "name": "High Knees",
+            "reps": "2 x 20y",
+            "number": "1b"
+          },
+          {
+            "name": "Butt Kicks",
+            "reps": "2 x 20y",
+            "number": "1c"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Box Jumps",
+            "reps": "5 x 3",
+            "number": "2a"
+          },
+          {
+            "name": "Hurdle Hops",
+            "reps": "5 x 5",
+            "number": "2b"
+          },
+          {
+            "name": "Single-Leg Box Jump",
+            "reps": "3 x 3 ea",
+            "number": "2c"
+          }
+        ],
+        "label": "Plyometrics"
+      },
+      {
+        "exercises": [
+          {
+            "name": "10m Acceleration",
+            "reps": "x 5",
+            "number": "3a"
+          },
+          {
+            "name": "30m Fly Sprint",
+            "reps": "x 4",
+            "number": "3b"
+          }
+        ],
+        "label": "Sprints"
+      },
+      {
+        "exercises": [
+          {
+            "name": "MB Chest Pass",
+            "reps": "3 x 6",
+            "number": "4a"
+          },
+          {
+            "name": "MB Overhead Throw",
+            "reps": "3 x 6",
+            "number": "4b"
+          },
+          {
+            "name": "MB Rotational Throw",
+            "reps": "3 x 4 ea",
+            "number": "4c"
+          }
+        ],
+        "label": "Med Ball"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "Ankle Circles",
+            "reps": "2 x 10 ea"
+          },
+          {
+            "name": "Leg Swings (front/lateral)",
+            "reps": "2 x 10 ea"
+          },
+          {
+            "name": "Walking Knee Hugs",
+            "reps": "2 x 10"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "Hollow Body Hold",
+            "reps": "3 x 0:30"
+          },
+          {
+            "name": "MB Overhead Throw",
+            "reps": "3 x 6"
+          },
+          {
+            "name": "Plank Shoulder Taps",
+            "reps": "3 x 10 ea"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "dayNumber": 30,
+    "date": "2026-04-03",
+    "dayType": "Full Body",
+    "throwsFocus": "Shot Put",
+    "throwsWarmup": [
+      {
+        "exercises": [
+          {
+            "name": "Broad Jump to Sprint",
+            "reps": "3 x 25y"
+          },
+          {
+            "name": "Tuck Jumps",
+            "reps": "3 x 8"
+          },
+          {
+            "name": "Clap Push-Ups",
+            "reps": "3 x 8"
+          },
+          {
+            "name": "Single Leg Hops",
+            "reps": "3 x 10y each"
+          },
+          {
+            "name": "Bear Crawls",
+            "reps": "3 x 15y"
+          }
+        ]
+      }
+    ],
+    "throwing": [
+      {
+        "exercises": [
+          {
+            "name": "Drivers",
+            "reps": "x 10"
+          },
+          {
+            "name": "Overhead Throws",
+            "reps": "x 10"
+          },
+          {
+            "name": "Stand Throws",
+            "reps": "x 6"
+          },
+          {
+            "name": "Glide Shuffles",
+            "reps": "x 6"
+          },
+          {
+            "name": "Full Throws",
+            "reps": "x 5"
+          }
+        ]
+      }
+    ],
+    "lifting": [
+      {
+        "exercises": [
+          {
+            "name": "Inchworms",
+            "reps": "2 x 5",
+            "number": "W1"
+          },
+          {
+            "name": "Hip Circle Walks",
+            "reps": "2 x 10 ea",
+            "number": "W2"
+          }
+        ],
+        "label": "Warmup"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Hang Clean",
+            "reps": "5 x 3 (increase wt)",
+            "number": "1a"
+          },
+          {
+            "name": "Back Squat",
+            "reps": "4 x 5 (increase wt)",
+            "number": "1b"
+          }
+        ],
+        "label": "Compound"
+      },
+      {
+        "exercises": [
+          {
+            "name": "DB Step-Ups",
+            "reps": "4 x 6 ea",
+            "number": "2a"
+          },
+          {
+            "name": "DB Single Arm Row",
+            "reps": "4 x 8 ea",
+            "number": "2b"
+          }
+        ],
+        "label": "Superset 1"
+      },
+      {
+        "exercises": [
+          {
+            "name": "Single-Leg RDL",
+            "reps": "3 x 8 ea",
+            "number": "3a"
+          },
+          {
+            "name": "Push-Ups (weighted)",
+            "reps": "3 x 10",
+            "number": "3b"
+          }
+        ],
+        "label": "Superset 2"
+      }
+    ],
+    "mobility": [
+      {
+        "exercises": [
+          {
+            "name": "World's Greatest Stretch",
+            "reps": "2 x 5 ea"
+          },
+          {
+            "name": "Pigeon Stretch",
+            "reps": "2 x 1:00 ea"
+          },
+          {
+            "name": "Scorpion",
+            "reps": "2 x 8 ea"
+          },
+          {
+            "name": "Tib Raises",
+            "reps": "2 x 25"
+          },
+          {
+            "name": "Wall Slide",
+            "reps": "2 x 10"
+          },
+          {
+            "name": "Banded Shoulder ER",
+            "reps": "2 x 10 ea"
+          }
+        ]
+      }
+    ],
+    "core": [
+      {
+        "exercises": [
+          {
+            "name": "MB Slam + Rotate",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Pallof Press Hold",
+            "reps": "3 x 0:20 ea"
+          },
+          {
+            "name": "Bicycle Crunches",
+            "reps": "3 x 20"
+          },
+          {
+            "name": "Bird Dogs",
+            "reps": "3 x 8 ea"
+          },
+          {
+            "name": "Suitcase Carry",
+            "reps": "3 x 30y ea"
+          }
+        ]
+      }
+    ]
+  }
+]

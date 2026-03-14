@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "No Workout Today";
+}
+
+<div class="no-workout">
+    <h2>No workout scheduled for today</h2>
+    <p>@(ViewBag.Message ?? "Check the calendar for upcoming sessions.")</p>
+    <a href="/" class="btn btn-primary">View Calendar</a>
+</div>

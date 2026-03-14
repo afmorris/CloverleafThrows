@@ -1,0 +1,79 @@
+@model CloverleafThrows.Models.MesocycleBuilderViewModel
+@{
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "New Mesocycle";
+}
+
+<div class="admin-page-header">
+    <h1>New Mesocycle</h1>
+    <a href="/Admin/Mesocycles" class="btn">Cancel</a>
+</div>
+
+<div class="admin-card">
+    <form method="post" action="/Admin/Mesocycles/Create">
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Name</label>
+                <input type="text" name="Name" class="form-input" required placeholder="e.g., Familiarity & Strength Building" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Description</label>
+                <input type="text" name="Description" class="form-input" placeholder="Optional description" />
+            </div>
+        </div>
+
+        <div class="form-row-3">
+            <div class="form-group">
+                <label class="form-label">Start Date (Monday)</label>
+                <input type="date" name="StartDate" value="@Model.StartDate.ToString("yyyy-MM-dd")" class="form-input" required />
+                <div class="form-hint">Should be a Monday</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Number of Weeks</label>
+                <select name="Weeks" class="form-select">
+                    @for (int i = 1; i <= 12; i++)
+                    {
+                        <option value="@i" selected="@(i == 4)">@i week@(i > 1 ? "s" : "")</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Week Template</label>
+                <select name="TemplateId" class="form-select">
+                    <option value="">None (blank days)</option>
+                    @foreach (var t in Model.Templates)
+                    {
+                        <option value="@t.Id">@t.Name</option>
+                    }
+                </select>
+                <div class="form-hint">Auto-generates day types and SP/DT alternation</div>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Create Mesocycle</button>
+        </div>
+    </form>
+</div>
+
+@if (Model.Templates.Any())
+{
+    <div class="admin-card" style="margin-top:1rem;">
+        <div class="admin-card-title" style="margin-bottom:0.75rem;">Available Templates</div>
+        @foreach (var t in Model.Templates)
+        {
+            <div style="margin-bottom:1rem;">
+                <div style="font-weight:600; font-size:0.875rem;">@t.Name</div>
+                <div style="display:flex; gap:0.5rem; margin-top:0.25rem;">
+                    @foreach (var d in t.Days)
+                    {
+                        <div style="font-size:0.75rem; padding:0.25rem 0.5rem; background:var(--gray-50); border-radius:4px; border:1px solid var(--gray-200);">
+                            <span style="font-weight:600;">@d.DayOfWeekName</span>: @d.DayType
+                            <span style="color:var(--text-muted);">(@d.ThrowsFocus)</span>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+}

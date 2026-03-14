@@ -1,0 +1,64 @@
+@model List<CloverleafThrows.Models.MesocycleTemplate>
+@{
+    Layout = "~/Views/Admin/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Week Templates";
+    var dayTypes = new[] { "Oly / Lower", "Upper Body", "Throwing Only", "Jump / Sprint", "Full Body" };
+    var focusOptions = new[] { "Shot Put", "Discus", "Alternate" };
+}
+
+<div class="admin-page-header">
+    <h1>Week Templates</h1>
+    <a href="/Admin/Mesocycles" class="btn">Back to Mesocycles</a>
+</div>
+
+@foreach (var t in Model)
+{
+    <div class="admin-card">
+        <div class="admin-card-title">@t.Name</div>
+        <div style="display:flex; gap:0.5rem; margin-top:0.5rem; flex-wrap:wrap;">
+            @foreach (var d in t.Days)
+            {
+                <div style="font-size:0.8125rem; padding:0.375rem 0.625rem; background:var(--gray-50); border-radius:6px; border:1px solid var(--gray-200);">
+                    <span style="font-weight:600;">@d.DayOfWeekName</span>: @d.DayType
+                    <span style="color:var(--text-muted);">(@d.ThrowsFocus)</span>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+<div class="admin-card">
+    <div class="admin-card-title" style="margin-bottom:1rem;">Create New Template</div>
+    <form method="post" action="/Admin/Mesocycles/CreateTemplate">
+        <div class="form-group">
+            <label class="form-label">Template Name</label>
+            <input type="text" name="name" class="form-input" required placeholder="e.g., Standard Throws Week" />
+        </div>
+        <div class="form-group">
+            <label class="form-label">Description</label>
+            <input type="text" name="description" class="form-input" placeholder="Optional" />
+        </div>
+
+        <div style="margin-top:1rem;">
+            <label class="form-label">Days (Mon–Fri)</label>
+            @for (int d = 1; d <= 5; d++)
+            {
+                var dayName = d switch { 1 => "Monday", 2 => "Tuesday", 3 => "Wednesday", 4 => "Thursday", 5 => "Friday", _ => "" };
+                <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.375rem;">
+                    <input type="hidden" name="dayOfWeek" value="@d" />
+                    <span style="width:80px; font-size:0.8125rem; font-weight:600;">@dayName</span>
+                    <select name="dayType" class="form-select" style="width:auto;">
+                        @foreach (var dt in dayTypes) { <option value="@dt">@dt</option> }
+                    </select>
+                    <select name="throwsFocus" class="form-select" style="width:auto;">
+                        @foreach (var f in focusOptions) { <option value="@f">@f</option> }
+                    </select>
+                </div>
+            }
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Create Template</button>
+        </div>
+    </form>
+</div>

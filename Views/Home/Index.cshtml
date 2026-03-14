@@ -1,0 +1,71 @@
+@model List<CloverleafThrows.Models.CalendarWeek>
+@{
+    ViewData["Title"] = "Calendar";
+    var today = DateTime.Today;
+    var mesocycle = ViewBag.Mesocycle as CloverleafThrows.Models.Mesocycle;
+    var meets = ViewBag.UpcomingMeets as List<CloverleafThrows.Models.Meet> ?? new();
+}
+
+<div class="page-header">
+    <h1>Training Calendar</h1>
+    @if (mesocycle != null)
+    {
+        <p>@mesocycle.Name &mdash; @mesocycle.StartDate.ToString("MMM d") to @mesocycle.EndDate.ToString("MMM d")</p>
+    }
+</div>
+
+@if (!Model.Any())
+{
+    <div class="card card-padded" style="text-align:center; padding:3rem;">
+        <p style="color:var(--text-muted);">@(ViewBag.Message ?? "No active training cycle.")</p>
+    </div>
+}
+else
+{
+    @foreach (var week in Model)
+    {
+        <div class="calendar-week">
+            <div class="calendar-week-label">@week.Label</div>
+            <div class="calendar-grid">
+                @foreach (var day in week.Days)
+                {
+                    var isToday = day.Date.Date == today;
+                    <a href="/Workout/Detail?date=@day.Date.ToString("yyyy-MM-dd")"
+                       class="cal-day @(isToday ? "is-today" : "")">
+                        <div class="cal-day-header">
+                            <span class="cal-day-date">@day.Date.ToString("ddd, MMM d")</span>
+                            <span class="cal-day-num">Day @day.DayNumber</span>
+                        </div>
+                        <div class="cal-day-body">
+                            <div class="cal-day-tags">
+                                <span class="tag" style="background:@day.DayTypeColor;color:@day.DayTypeTextColor">@day.DayType</span>
+                                <span class="tag" style="background:@day.ThrowsFocusColor;color:@day.ThrowsFocusTextColor">@day.ThrowsFocus</span>
+                            </div>
+                            @if (isToday)
+                            {
+                                <div class="cal-day-focus" style="color: var(--green-dark); font-weight: 600;">&#9654; Today</div>
+                            }
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+    }
+}
+
+@if (meets.Any())
+{
+    <div style="margin-top:2rem;">
+        <h2 style="font-size:1.125rem; font-weight:700; margin-bottom:0.75rem;">Upcoming Meets</h2>
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+            @foreach (var meet in meets)
+            {
+                <div class="card card-padded" style="min-width:200px;">
+                    <div style="font-size:0.8125rem; font-weight:700; color:var(--green-dark);">@meet.Date.ToString("MMM d")</div>
+                    <div style="font-size:0.875rem; font-weight:600; margin-top:0.125rem;">@meet.Name</div>
+                    <div style="font-size:0.75rem; color:var(--text-muted);">@meet.Location</div>
+                </div>
+            }
+        </div>
+    </div>
+}
