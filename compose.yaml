@@ -1,0 +1,10 @@
+services:
+  cloverleafthrows.web:
+    image: cloverleafthrows.web
+    build:
+      context: .
+      dockerfile: CloverleafThrows.Web/Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=${CONNECTION_STRING}

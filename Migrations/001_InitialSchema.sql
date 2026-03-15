@@ -6,8 +6,8 @@
 
 -- CREATE DATABASE CloverleafThrows;
 -- GO
--- USE CloverleafThrows;
--- GO
+USE "cloverleaf-throws";
+GO
 
 -- ============================================================
 -- EXERCISES (reusable library)

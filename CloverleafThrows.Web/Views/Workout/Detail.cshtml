@@ -1,0 +1,96 @@
+@model CloverleafThrows.Models.WorkoutDay
+@{
+    ViewData["Title"] = $"Day {Model.DayNumber} — {Model.Date:MMM d}";
+}
+
+<div class="workout-hero">
+    <div class="workout-hero-left">
+        <h1>
+            <span class="day-num">Day @Model.DayNumber</span>
+            @Model.DayType
+        </h1>
+        <div class="workout-date">@Model.Date.ToString("dddd, MMMM d, yyyy")</div>
+        <div class="workout-hero-tags">
+            <span class="tag" style="background:@Model.DayTypeColor;color:@Model.DayTypeTextColor">@Model.DayType</span>
+            @if (!string.IsNullOrEmpty(Model.ThrowsFocus))
+            {
+                <span class="tag" style="background:@Model.ThrowsFocusColor;color:@Model.ThrowsFocusTextColor">@Model.ThrowsFocus</span>
+            }
+        </div>
+    </div>
+    <div class="workout-hero-right no-print">
+        <a href="/Workout/Print?date=@Model.Date.ToString("yyyy-MM-dd")" class="btn" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Print
+        </a>
+        <form method="post" action="/Workout/SwapFocus" style="display:inline;">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <input type="hidden" name="returnUrl" value="@Context.Request.Path@Context.Request.QueryString" />
+            <button type="submit" class="btn" title="Weather swap">
+                @(Model.ThrowsFocus == "Shot Put" ? "Switch to Discus" : "Switch to Shot Put")
+            </button>
+        </form>
+        <a href="/" class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Calendar
+        </a>
+    </div>
+</div>
+
+<div class="workout-sections">
+    <div>
+        @{var warmup = Model.ThrowsWarmup; }
+        @{
+            var warmupVd = new ViewDataDictionary(ViewData);
+            warmupVd["Title"] = "Throws Warmup"; warmupVd["BgColor"] = "#1F4E79"; warmupVd["TextColor"] = "#fff"; warmupVd["Section"] = warmup;
+        }
+        @await Html.PartialAsync("_SectionCard", warmupVd)
+
+        <div style="height: 1rem;"></div>
+
+        @{
+            var throwing = Model.Throwing;
+            var throwTitle = !string.IsNullOrEmpty(Model.ThrowsFocus) ? $"Throwing — {Model.ThrowsFocus}" : "Throwing";
+            var throwBg = Model.ThrowsFocus == "Shot Put" ? "#C55A11" : "#1F4E79";
+            var throwingVd = new ViewDataDictionary(ViewData);
+            throwingVd["Title"] = throwTitle; throwingVd["BgColor"] = throwBg; throwingVd["TextColor"] = "#fff"; throwingVd["Section"] = throwing;
+        }
+        @await Html.PartialAsync("_SectionCard", throwingVd)
+
+        @if (!string.IsNullOrEmpty(Model.CoachNotes))
+        {
+            <div class="coach-notes" style="margin-top: 1rem;">
+                <div class="coach-notes-label">Coach Notes</div>
+                <p>@Model.CoachNotes</p>
+            </div>
+        }
+    </div>
+
+    <div>
+        @{
+            var lifting = Model.Lifting;
+            var liftBg = Model.DayType == "Jump / Sprint" ? "#7F6000" : "#1F4E79";
+            var liftTitle = Model.DayType == "Throwing Only" ? "Rest Day"
+                : Model.DayType == "Jump / Sprint" ? "Jump / Sprint Session" : "Lifting";
+            var liftingVd = new ViewDataDictionary(ViewData);
+            liftingVd["Title"] = liftTitle; liftingVd["BgColor"] = liftBg; liftingVd["TextColor"] = "#fff"; liftingVd["Section"] = lifting;
+        }
+        @await Html.PartialAsync("_SectionCard", liftingVd)
+    </div>
+
+    <div>
+        @{
+            var mobilityVd = new ViewDataDictionary(ViewData);
+            mobilityVd["Title"] = "Mobility"; mobilityVd["BgColor"] = "#375623"; mobilityVd["TextColor"] = "#fff"; mobilityVd["Section"] = Model.Mobility;
+        }
+        @await Html.PartialAsync("_SectionCard", mobilityVd)
+
+        <div style="height: 1rem;"></div>
+
+        @{
+            var coreVd = new ViewDataDictionary(ViewData);
+            coreVd["Title"] = "Core"; coreVd["BgColor"] = "#4A3670"; coreVd["TextColor"] = "#fff"; coreVd["Section"] = Model.Core;
+        }
+        @await Html.PartialAsync("_SectionCard", coreVd)
+    </div>
+</div>

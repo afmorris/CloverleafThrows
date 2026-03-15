@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>CloverleafThrows.Web</RootNamespace>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CloverleafThrows.Data\CloverleafThrows.Data.csproj" />
+    <ProjectReference Include="..\CloverleafThrows.Models\CloverleafThrows.Models.csproj" />
+  </ItemGroup>
+</Project>
