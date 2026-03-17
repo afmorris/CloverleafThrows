@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div style="display:flex; gap:0.375rem;">
-                <a href="/Workout/Detail?date=@today.Date.ToString("yyyy-MM-dd")" class="btn" target="_blank">View</a>
+                <a href="/Workout/Detail/@today.Date.ToString("yyyy-MM-dd")" class="btn" target="_blank">View</a>
                 <a href="/Admin/Workouts/Edit/@today.Id" class="btn btn-primary">Edit</a>
                 <form method="post" action="/Admin/Workouts/SwapFocus" style="display:inline;">
                     <input type="hidden" name="id" value="@today.Id" />

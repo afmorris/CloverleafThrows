@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="workout-hero-right no-print">
-        <a href="/Workout/Print?date=@Model.Date.ToString("yyyy-MM-dd")" class="btn" target="_blank">
+        <a href="/Workout/Print/@Model.Date.ToString("yyyy-MM-dd")" class="btn" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
             Print
         </a>
@@ -37,7 +37,15 @@
     </div>
 </div>
 
-<div class="workout-sections">
+@if (!string.IsNullOrEmpty(Model.CoachNotes))
+{
+    <div class="coach-notes" style="margin-bottom: 1.25rem;">
+        <div class="coach-notes-label">Coach Notes</div>
+        <p>@Model.CoachNotes</p>
+    </div>
+}
+
+<div class="workout-sections @(Model.DayType == "Throwing Only" ? "workout-sections--two-col" : "")">
     <div>
         @{var warmup = Model.ThrowsWarmup; }
         @{
@@ -57,26 +65,21 @@
         }
         @await Html.PartialAsync("_SectionCard", throwingVd)
 
-        @if (!string.IsNullOrEmpty(Model.CoachNotes))
-        {
-            <div class="coach-notes" style="margin-top: 1rem;">
-                <div class="coach-notes-label">Coach Notes</div>
-                <p>@Model.CoachNotes</p>
-            </div>
-        }
     </div>
 
+    @if (Model.DayType != "Throwing Only")
+    {
     <div>
         @{
             var lifting = Model.Lifting;
             var liftBg = Model.DayType == "Jump / Sprint" ? "#7F6000" : "#1F4E79";
-            var liftTitle = Model.DayType == "Throwing Only" ? "Rest Day"
-                : Model.DayType == "Jump / Sprint" ? "Jump / Sprint Session" : "Lifting";
+            var liftTitle = Model.DayType == "Jump / Sprint" ? "Jump / Sprint Session" : "Lifting";
             var liftingVd = new ViewDataDictionary(ViewData);
             liftingVd["Title"] = liftTitle; liftingVd["BgColor"] = liftBg; liftingVd["TextColor"] = "#fff"; liftingVd["Section"] = lifting;
         }
         @await Html.PartialAsync("_SectionCard", liftingVd)
     </div>
+    }
 
     <div>
         @{

@@ -196,6 +196,22 @@ public class WorkoutRepository(IDbConnectionFactory db) : IWorkoutRepository
         return await conn.ExecuteScalarAsync<int>(sql, grp);
     }
 
+    public async Task DeleteGroupAsync(int id)
+    {
+        using var conn = db.CreateConnection();
+        // WorkoutExercises has no ON DELETE CASCADE, so clear children first
+        await conn.ExecuteAsync("DELETE FROM WorkoutExercises WHERE ExerciseGroupId = @id", new { id });
+        await conn.ExecuteAsync("DELETE FROM ExerciseGroups WHERE Id = @id", new { id });
+    }
+
+    public async Task UpdateGroupLabelAsync(int id, string? label)
+    {
+        using var conn = db.CreateConnection();
+        await conn.ExecuteAsync(
+            "UPDATE ExerciseGroups SET Label = @label WHERE Id = @id",
+            new { id, label });
+    }
+
     public async Task<int> AddExerciseAsync(WorkoutExercise ex)
     {
         using var conn = db.CreateConnection();

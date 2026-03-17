@@ -15,6 +15,8 @@ public interface IWorkoutRepository
     Task<int> DuplicateDayAsync(int sourceId, DateTime newDate, int newDayNumber);
     Task<int> AddSectionAsync(WorkoutSection section);
     Task<int> AddGroupAsync(ExerciseGroup grp);
+    Task DeleteGroupAsync(int id);
+    Task UpdateGroupLabelAsync(int id, string? label);
     Task<int> AddExerciseAsync(WorkoutExercise ex);
     Task UpdateExerciseAsync(WorkoutExercise ex);
     Task DeleteExerciseAsync(int id);

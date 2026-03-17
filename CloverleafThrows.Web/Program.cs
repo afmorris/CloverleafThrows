@@ -27,6 +27,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
+app.MapControllerRoute(name: "workoutDetail", pattern: "Workout/Detail/{date}", defaults: new { controller = "Workout", action = "Detail" });
+app.MapControllerRoute(name: "workoutPrint", pattern: "Workout/Print/{date}", defaults: new { controller = "Workout", action = "Print" });
 app.MapControllerRoute(name: "admin", pattern: "Admin/{action=Dashboard}/{id?}", defaults: new { controller = "Admin" });
 app.MapControllerRoute(name: "adminWorkouts", pattern: "Admin/Workouts/{action=Index}/{id?}", defaults: new { controller = "AdminWorkouts" });
 app.MapControllerRoute(name: "adminExercises", pattern: "Admin/Exercises/{action=Index}/{id?}", defaults: new { controller = "AdminExercises" });

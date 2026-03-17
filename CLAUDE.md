@@ -188,7 +188,7 @@ When writing a new migration:
 
 ## Domain Values (hardcoded — do not change without updating all references)
 
-**Day types:** `"Oly / Lower"`, `"Upper Body"`, `"Throwing Only"`, `"Jump / Sprint"`, `"Full Body"`
+**Day types:** `"Lower Body"`, `"Upper Body"`, `"Throwing Only"`, `"Jump / Sprint"`, `"Full Body"`
 
 **Throws focus:** `"Shot Put"`, `"Discus"` (templates may use `"Alternate"` which resolves at generation time)
 

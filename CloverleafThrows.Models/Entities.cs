@@ -51,7 +51,7 @@ public class WorkoutDay
 
     public string DayTypeColor => DayType switch
     {
-        "Oly / Lower" => "#D6E4F0",
+        "Lower Body" => "#D6E4F0",
         "Upper Body" => "#E2EFDA",
         "Throwing Only" => "#FCE4D6",
         "Jump / Sprint" => "#FFF2CC",
@@ -61,7 +61,7 @@ public class WorkoutDay
 
     public string DayTypeTextColor => DayType switch
     {
-        "Oly / Lower" => "#1F4E79",
+        "Lower Body" => "#1F4E79",
         "Upper Body" => "#375623",
         "Throwing Only" => "#C55A11",
         "Jump / Sprint" => "#7F6000",

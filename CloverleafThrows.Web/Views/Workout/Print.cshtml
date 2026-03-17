@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Day @Model.DayNumber — @Model.Date.ToString("MMM d, yyyy") — Cloverleaf Throws</title>
+    <title>@Model.Date.ToString("dddd, MMMM d yyyy") — Cloverleaf Throws</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/site.css" />
     <style>
@@ -33,7 +33,15 @@
             </div>
         </div>
 
-        <div class="workout-sections">
+        @if (!string.IsNullOrEmpty(Model.CoachNotes))
+        {
+            <div class="coach-notes" style="margin-bottom: 1rem;">
+                <div class="coach-notes-label">Coach Notes</div>
+                <p>@Model.CoachNotes</p>
+            </div>
+        }
+
+        <div class="workout-sections @(Model.DayType == "Throwing Only" ? "workout-sections--two-col" : "")">
             <div>
                 @{ var throwTitle = !string.IsNullOrEmpty(Model.ThrowsFocus) ? $"Throwing — {Model.ThrowsFocus}" : "Throwing";
                    var throwBg = Model.ThrowsFocus == "Shot Put" ? "#C55A11" : "#1F4E79"; }
@@ -42,15 +50,16 @@
                 <div style="height:0.75rem;"></div>
                 @{ var throwingVd = new ViewDataDictionary(ViewData); throwingVd["Title"] = throwTitle; throwingVd["BgColor"] = throwBg; throwingVd["TextColor"] = "#fff"; throwingVd["Section"] = Model.Throwing; }
                 @await Html.PartialAsync("_SectionCard", throwingVd)
-                @if (!string.IsNullOrEmpty(Model.CoachNotes))
-                { <div class="coach-notes" style="margin-top:0.75rem;"><div class="coach-notes-label">Coach Notes</div><p>@Model.CoachNotes</p></div> }
             </div>
+            @if (Model.DayType != "Throwing Only")
+            {
             <div>
-                @{ var liftTitle = Model.DayType == "Jump / Sprint" ? "Jump / Sprint Session" : Model.DayType == "Throwing Only" ? "Rest Day" : "Lifting";
+                @{ var liftTitle = Model.DayType == "Jump / Sprint" ? "Jump / Sprint Session" : "Lifting";
                    var liftBg = Model.DayType == "Jump / Sprint" ? "#7F6000" : "#1F4E79"; }
                 @{ var liftingVd = new ViewDataDictionary(ViewData); liftingVd["Title"] = liftTitle; liftingVd["BgColor"] = liftBg; liftingVd["TextColor"] = "#fff"; liftingVd["Section"] = Model.Lifting; }
                 @await Html.PartialAsync("_SectionCard", liftingVd)
             </div>
+            }
             <div>
                 @{ var mobilityVd = new ViewDataDictionary(ViewData); mobilityVd["Title"] = "Mobility"; mobilityVd["BgColor"] = "#375623"; mobilityVd["TextColor"] = "#fff"; mobilityVd["Section"] = Model.Mobility; }
                 @await Html.PartialAsync("_SectionCard", mobilityVd)

@@ -151,6 +151,20 @@ public class AdminWorkoutsController(
     }
 
     [HttpPost]
+    public async Task<IActionResult> DeleteGroup(int id)
+    {
+        await workouts.DeleteGroupAsync(id);
+        return Json(new { success = true });
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> UpdateGroupLabel(int id, string? label)
+    {
+        await workouts.UpdateGroupLabelAsync(id, label);
+        return Json(new { success = true });
+    }
+
+    [HttpPost]
     public async Task<IActionResult> DeleteExercise(int id)
     {
         await workouts.DeleteExerciseAsync(id);

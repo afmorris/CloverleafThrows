@@ -30,7 +30,7 @@ else
                 @foreach (var day in week.Days)
                 {
                     var isToday = day.Date.Date == today;
-                    <a href="/Workout/Detail?date=@day.Date.ToString("yyyy-MM-dd")"
+                    <a href="/Workout/Detail/@day.Date.ToString("yyyy-MM-dd")"
                        class="cal-day @(isToday ? "is-today" : "")">
                         <div class="cal-day-header">
                             <span class="cal-day-date">@day.Date.ToString("ddd, MMM d")</span>

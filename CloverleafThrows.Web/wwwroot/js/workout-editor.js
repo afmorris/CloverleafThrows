@@ -67,11 +67,20 @@ async function deleteExercise(id, row) {
 
 // ---- Groups ----
 
+async function deleteGroup(groupId, container) {
+    if (!confirm('Delete this group and all its exercises?')) return;
+    await postJson('/Admin/Workouts/DeleteGroup', { id: groupId });
+    container.remove();
+}
+
+async function updateGroupLabel(groupId, input) {
+    await postJson('/Admin/Workouts/UpdateGroupLabel', { id: groupId, label: input.value });
+}
+
 async function addGroup(sectionId) {
-    const label = prompt('Group label (optional, e.g. "Superset 1"):', '');
-    const result = await postJson('/Admin/Workouts/AddGroup', {
+    await postJson('/Admin/Workouts/AddGroup', {
         workoutSectionId: sectionId,
-        label: label || ''
+        label: ''
     });
     location.reload();
 }

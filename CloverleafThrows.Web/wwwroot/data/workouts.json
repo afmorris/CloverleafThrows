@@ -2,7 +2,7 @@
   {
     "dayNumber": 11,
     "date": "2026-03-09",
-    "dayType": "Oly / Lower",
+    "dayType": "Lower Body",
     "throwsFocus": "Discus",
     "throwsWarmup": [
       {
@@ -793,7 +793,7 @@
   {
     "dayNumber": 16,
     "date": "2026-03-16",
-    "dayType": "Oly / Lower",
+    "dayType": "Lower Body",
     "throwsFocus": "Shot Put",
     "throwsWarmup": [
       {
@@ -1599,7 +1599,7 @@
   {
     "dayNumber": 21,
     "date": "2026-03-23",
-    "dayType": "Oly / Lower",
+    "dayType": "Lower Body",
     "throwsFocus": "Discus",
     "throwsWarmup": [
       {
@@ -2429,7 +2429,7 @@
   {
     "dayNumber": 26,
     "date": "2026-03-30",
-    "dayType": "Oly / Lower",
+    "dayType": "Lower Body",
     "throwsFocus": "Shot Put",
     "throwsWarmup": [
       {

@@ -317,6 +317,10 @@ body {
     align-items: start;
 }
 
+.workout-sections--two-col {
+    grid-template-columns: 1fr 1fr;
+}
+
 @media (max-width: 900px) {
     .workout-sections {
         grid-template-columns: 1fr;

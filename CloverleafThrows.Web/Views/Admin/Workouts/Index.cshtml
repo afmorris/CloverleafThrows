@@ -60,7 +60,7 @@ else
                     </td>
                     <td style="text-align:right; white-space:nowrap;">
                         <a href="/Admin/Workouts/Edit/@day.Id" class="btn" style="font-size:0.75rem; padding:0.25rem 0.5rem;">Edit</a>
-                        <a href="/Workout/Detail?date=@day.Date.ToString("yyyy-MM-dd")" class="btn" style="font-size:0.75rem; padding:0.25rem 0.5rem;" target="_blank">View</a>
+                        <a href="/Workout/Detail/@day.Date.ToString("yyyy-MM-dd")" class="btn" style="font-size:0.75rem; padding:0.25rem 0.5rem;" target="_blank">View</a>
                         <form method="post" action="/Admin/Workouts/Delete" style="display:inline;"
                               onsubmit="return confirm('Delete Day @day.DayNumber? This cannot be undone.');">
                             <input type="hidden" name="id" value="@day.Id" />
