@@ -8,8 +8,6 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["CloverleafThrows.Web/CloverleafThrows.Web.csproj", "CloverleafThrows.Web/"]
-COPY ["CloverleafThrows.Data/CloverleafThrows.Data.csproj", "CloverleafThrows.Data/"]
-COPY ["CloverleafThrows.Models/CloverleafThrows.Models.csproj", "CloverleafThrows.Models/"]
 RUN dotnet restore "CloverleafThrows.Web/CloverleafThrows.Web.csproj"
 COPY . .
 WORKDIR "/src/CloverleafThrows.Web"
